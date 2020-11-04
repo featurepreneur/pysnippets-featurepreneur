@@ -1,0 +1,9 @@
+*.pyc
+*~
+*.sw[po]
+*.DS_Store
+certs/
+.coverage
+
+# certicates
+final_certificates/*.pdf
