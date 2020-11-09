@@ -36,14 +36,14 @@ from PIL import ImageFont
 
 FOLDER_LOCAITON = '/Users/rajacsp/d/tact/The Big Data Boss/BDB-Memes/Lil-Boys/'
 
-FILENAME        = 'BDB_Meme_1002.jpg'
+FILENAME        = 'BDB_Meme_1024.jpg'
 OUTPUT_FILENAME = 'test_watermark.jpg'
 
 FONT_LOCAITON = '/Users/rajacsp/datasets/fonts/Open_Sans/OpenSans-Light.ttf'
 
 WATERMARK_LOCATION = '/Users/rajacsp/d/tact/The Big Data Boss/logo/Big_Data_Boss_Final.png'
 
-RESIZE_FACTOR = 0.02
+RESIZE_FACTOR = 0.03
 
 def apply_watermark_image(input_path, output_path):
 
@@ -58,7 +58,7 @@ def apply_watermark_image(input_path, output_path):
 
     watermark = watermark.resize((wm_witdh_new, wm_height_new))
     
-    photo.paste(watermark, ((ph_width - wm_height_new - 150), (ph_height - wm_height_new - 70)), watermark)
+    photo.paste(watermark, ((ph_width - wm_witdh_new - 100), (ph_height - wm_height_new - 170)), watermark)
 
     photo.save(output_path)
 
